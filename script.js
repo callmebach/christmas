@@ -79,11 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Mảng chứa các nội dung pop-up
     const popupContents = [
-        "Cho anh coi 1 tháng hehehe 🎄🎁",
+        "Cho anh coi 1 tháng 2 lần hehehe 🎄🎁",
         "Nói yêu anh 10 lần ❤️✨",
         "Đu trend tiktok cho anh xem 🎅🎉",
         "Anh yêu emm 🎁❤️",
-        "Đeo đuôi 🌟🎄"
+        "Đeo đuôiii 🌟🎄",
+        "Chơm em 10 cáii ❤️❤️❤️"
     ];
 
     // Lấy các phần tử cần thiết
