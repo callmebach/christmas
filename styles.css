@@ -1,0 +1,118 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(49, 214, 255));
+}
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes diagonal-fall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+        transform: translate(10vw, 100vh);
+    }
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.img__tree{
+  width: 600px;
+  position: relative;
+}
+
+.gifs{
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+}
+
+.gif{
+  cursor: pointer;
+}
+
+.gif:hover{
+  filter: brightness(130%);
+}
+
+.popup {
+  display: none; /* Ẩn pop-up ban đầu */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Lớp mờ nền */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  max-width: 400px;
+}
+
+.close {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
