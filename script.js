@@ -79,12 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Mảng chứa các nội dung pop-up
     const popupContents = [
-        "Cho anh coi 1 tháng 2 lần hehehe 🎄🎁",
-        "Nói yêu anh 10 lần ❤️✨",
-        "Đu trend tiktok cho anh xem 🎅🎉",
+        "1 thỏi son 🎄🎁",
+        "Quay video nói yêu anh :3❤️✨",
+        "Đu 1 trend tiktok 🎅🎉",
         "Anh yêu emm 🎁❤️",
-        "Đeo đuôiii 🌟🎄",
-        "Chơm em 10 cáii ❤️❤️❤️"
+        "Gấu bông 🌟🎄",
+        "Let me see >_< ❤️❤️❤️"
     ];
 
     // Lấy các phần tử cần thiết
@@ -96,9 +96,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hiển thị pop-up với nội dung ngẫu nhiên khi bấm vào icon hộp quà
     giftIcons.forEach((gift) => {
         gift.addEventListener("click", () => {
-            const randomIndex = Math.floor(Math.random() * popupContents.length); // Chọn ngẫu nhiên chỉ số
-            popupText.textContent = popupContents[randomIndex]; // Cập nhật nội dung pop-up
-            popUp.style.display = "flex";
+            if (popupContents.length > 0) {
+                const randomIndex = Math.floor(Math.random() * popupContents.length); // Chọn ngẫu nhiên chỉ số
+                popupText.textContent = popupContents[randomIndex]; // Cập nhật nội dung pop-up
+                popupContents.splice(randomIndex, 1); // Xóa nội dung đã chọn khỏi mảng
+                popUp.style.display = "flex";
+            } else {
+                popupText.textContent = "Em bé đã chọn hết quá rồii :(("; // Thông báo khi hết nội dung
+                popUp.style.display = "flex";
+            }
         });
     });
 
