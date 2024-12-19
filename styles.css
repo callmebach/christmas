@@ -72,7 +72,7 @@ html {
 
 .gifs{
   position: absolute;
-  bottom: 360px;
+  bottom: 260px;
   display: flex;
 }
 
@@ -127,8 +127,24 @@ html {
 
 .text__body{
   position: absolute;
-  bottom: 300px;
+  bottom: 200px;
   font-size: 20px;
   color:rgb(255, 125, 108);
   text-shadow: 2px 2px 4px rgb(247, 255, 26);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .popup-content {
+    padding: 10px;
+    max-width: 90%;
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 601px) {
+  .popup-content {
+    padding: 20px;
+    max-width: 500px;
+  }
 }
